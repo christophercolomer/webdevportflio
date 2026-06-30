@@ -1,0 +1,247 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: rgba(15, 23, 42, 0.65);
+}
+
+.modal-overlay[hidden] {
+  display: none;
+}
+
+.modal-overlay.open {
+  display: flex;
+}
+
+.modal-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 158rem;
+  max-height: 92vh;
+  overflow-y: auto;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.2);
+  padding: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .modal-box {
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .modal-box {
+    padding: 2.5rem;
+  }
+}
+
+
+/* ---------- Header ---------- */
+.modal-header {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.modal-subtitle {
+  margin: 0 0 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: rgba(29, 78, 216, 0.8); /* primary/80 */
+}
+
+.modal-title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1d4ed8; /* primary */
+}
+
+@media (min-width: 640px) {
+  .modal-title {
+    font-size: 1.875rem;
+  }
+}
+
+/* ---------- Team grid ---------- */
+.team-grid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (min-width: 640px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .team-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.team-card {
+  border: 1px solid #e2e8f0;
+  background-color: rgba(248, 250, 252, 0.7);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  cursor: pointer;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.team-card:hover {
+  transform: translateY(-0.25rem);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.team-photo {
+  position: relative;
+  margin-bottom: 1rem;
+  height: 10rem;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0 1px #e2e8f0 inset;
+}
+
+.team-photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team-name {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+@media (min-width: 640px) {
+  .team-name {
+    font-size: 1rem;
+  }
+}
+
+.team-role {
+  margin: 0.25rem 0 0;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgba(29, 78, 216, 0.8);
+}
+
+/* ---------- Footer text ---------- */
+.modal-footer {
+  width: 100%;
+  max-width: 42rem;
+}
+
+.footer-title {
+  margin-bottom: 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-align: left;
+}
+
+@media (min-width: 640px) {
+  .footer-title {
+    font-size: 1.25rem;
+  }
+}
+
+.footer-text {
+  text-align: center;
+  font-size: 0.875rem;
+  color: #374151;
+  line-height: 1.6;
+}
+
+@media (min-width: 640px) {
+  .footer-text {
+    font-size: 1rem;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.modal-overlay.open {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.modal-overlay.open .modal-box {
+  animation: zoomIn 0.3s ease-out;
+}
+
+.team-grid {
+    display: flex;    
+    gap: 24px;              
+    justify-content: center;
+}
+
+.card {
+    background: blue;
+    border-radius: 12px;
+    padding: 32px 24px;
+    text-align: center;
+    flex: 1;               
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.card img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 16px;
+}
+
+.card h3 {
+    margin: 0 0 4px;
+    font-size: 1.1rem;
+    color: white;
+}
+
+.card p, b {
+    font-size: 0.875rem;
+    color: white;
+    line-height: 1.6;
+    margin: 0;
+}

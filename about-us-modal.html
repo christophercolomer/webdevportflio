@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>About Us Modal</title>
+<link rel="stylesheet" href="about-us-modal.css" />
+</head>
+<body>
+  <div class="about-us-inline">
+    <div class="modal-header">
+      <p class="modal-subtitle">The people behind this</p>
+      <h2 class="modal-title">Meet the Team</h2>
+    </div>
+    <section class="team-grid">
+      <article class="team-card" data-target="card-christopher">
+        <div class="team-photo">
+          <img src="pics/green.png" alt="Christopher Colomer" />
+        </div>
+        <h3 class="team-name">Christopher Colomer</h3>
+        <p class="team-role">Software Engineer</p>
+      </article>
+
+      <article class="team-card" data-target="card-jeremy">
+        <div class="team-photo">
+          <img src="/images/people/Jeremy.jpg" alt="Jeremy Don Giyangan" />
+        </div>
+        <h3 class="team-name">Jeremy Don Giyangan</h3>
+        <p class="team-role">Software Engineer</p>
+      </article>
+
+      <article class="team-card" data-target="card-reinwel">
+        <div class="team-photo">
+          <img src="/images/people/reinwel.jpg" alt="Reinwel Tingson" />
+        </div>
+        <h3 class="team-name">Reinwel Tingson</h3>
+        <p class="team-role">Software Engineer</p>
+      </article>
+
+    </section>
+
+  </div>
+  <div class="modal-overlay" id="modal-overlay" hidden>
+    <div class="modal-box">
+      <button class="modal-close" id="modal-close">&times;</button>
+      <div class="card" id="card-christopher" hidden>
+        <img src="pics/CC.jpg" alt="Christopher">
+        <h3>Christopher Colomer</h3>
+        <br>
+        <b>Personal details:</b>
+        <p>Name: Christopher Colomer<br>Date of birth: April 25, 2007<br>Nationality: Filipino<br>Email Address: christopher.colomer-25@cpu.edu.ph<br>Phone Number: 09482573650<br>Hometown: Iloilo City, Iloilo, Philippines</p>
+        <br>
+        <h3>Expanded hobbies:</h3>
+        <p>Chess: I first learned to play chess 8 years ago, but I'm pretty inconsistent with my practice. I compete in tournaments during school events.</p>
+        <br>
+        <h3>Retrospective:</h3>
+        <p>During my first year, I learned how to use git and github, I picked up some languages namely: python, javascript and typescript, and I also learned the importance of not letting tasks pile up. Otherwise, I end up feeling stressed, cramming, and staying up late.</p>
+      </div>
+      <div class="card" id="card-jeremy" hidden></div>
+      <div class="card" id="card-reinwel" hidden></div>
+    </div>
+  </div>
+  
+<script src="about-us-modal.js"></script>
+</body>
+</html>
