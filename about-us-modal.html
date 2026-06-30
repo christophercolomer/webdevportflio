@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>About Us Modal</title>
-<link rel="stylesheet" href="about-us-modal.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us Modal</title>
+  <link rel="stylesheet" href="about-us-modal.css" />
 </head>
 <body>
+
   <div class="about-us-inline">
     <div class="modal-header">
       <p class="modal-subtitle">The people behind this</p>
       <h2 class="modal-title">Meet the Team</h2>
     </div>
+    
     <section class="team-grid">
       <article class="team-card" data-target="card-christopher">
         <div class="team-photo">
@@ -24,6 +26,7 @@
       <article class="team-card" data-target="card-jeremy">
         <div class="team-photo">
           <img src="pics/jeremy.svg" alt="Jeremy Don Giyangan" />
+          <img src="pics/red ranger.jpg" alt="Jeremy Don Giyangan" />
         </div>
         <h3 class="team-name">Jeremy Don Giyangan</h3>
         <p class="team-role">Software Engineer</p>
@@ -32,17 +35,18 @@
       <article class="team-card" data-target="card-reinwel">
         <div class="team-photo">
           <img src="pics/reinwel.svg" alt="Reinwel Tingson" />
+          <img src="pics/pink.jpg" alt="Reinwel Tingson" />
         </div>
         <h3 class="team-name">Reinwel Tingson</h3>
         <p class="team-role">Software Engineer</p>
       </article>
-
     </section>
-
   </div>
+
   <div class="modal-overlay" id="modal-overlay" hidden>
     <div class="modal-box">
       <button class="modal-close" id="modal-close">&times;</button>
+      
       <div class="card" id="card-christopher" hidden>
         <img src="pics/CC.jpg" alt="Christopher">
         <h3>Christopher Colomer</h3>
@@ -56,11 +60,44 @@
         <h3>Retrospective:</h3>
         <p>During my first year, I learned how to use git and github, I picked up some languages namely: python, javascript and typescript, and I also learned the importance of not letting tasks pile up. Otherwise, I end up feeling stressed, cramming, and staying up late.</p>
       </div>
-      <div class="card" id="card-jeremy" hidden></div>
-      <div class="card" id="card-reinwel" hidden></div>
+
+      <div class="card" id="card-jeremy" hidden>
+        <img src="pics/red ranger.jpg" alt="Jeremy Don Giyangan">
+        <h3>Jeremy Don Giyangan</h3>
+        <br>
+        <b>Personal details:</b>
+        <p>Name: Jeremy Don Giyangan<br>Date of birth: April 14, 2006<br>Nationality: Filipino<br>Email Address: jeremy.giyangan-25@cpu.edu.ph<br>Phone Number: 09454538473<br>Hometown: Amerang Cabatuan, Iloilo, Philippines</p>
+        <br>
+        <h3>Expanded hobbies:</h3>
+        <p>Online games: I love playing games like Mobile Legends and Valorant to beat boredom and release my frustration.</p>
+        <p> Gym:Going to the gym has been my hobby for nearly three years because it helps me stay active and get stronger.</p>
+        <br>
+        <h3>Retrospective:</h3>
+        <p>In my two years of college, I learned that good time management and teamwork are important for finishing major projects. </p>
+        <p> I also learned to write clean and simple code that my teammates can easily understand. </p>
+ 
+      </div>
+
+      <div class="card" id="card-reinwel" hidden>
+        <img src="pics/wally.jpg" alt="Reinwel Tingson">
+        <h3>Reinwel Tingson</h3>
+        <br>
+        <b>Personal details:</b>
+        <p>Name: Reinwel Tingson<br>Date of birth: [Birthdate]<br>Nationality: Filipino<br>Email Address: [Email]@cpu.edu.ph<br>Phone Number: [Phone]<br>Hometown: [Hometown]</p>
+        <br>
+        <h3>Expanded hobbies:</h3>
+        <p>Video Editing:I enjoy editing short-form videos for social media platforms such as TikTok, Instagram Reels, and YouTube Shorts.</p>
+        <p>I like creating engaging content by adding captions, transitions, motion graphics, and sound effects to make videos more entertaining and informative.</p>
+        <br>
+        <h3>Retrospective:</h3>
+        <p>Throughout my college journey, I have learned that consistency, effective communication, and time management are essential for balancing academics and freelance work. </p>
+        <p>Working as a video editor has strengthened my creativity, attention to detail, and ability to meet deadlines, while my software development projects have improved my problem-solving skills </p>
+        <p>and taught me how to write organized, maintainable code that is easy for teammates to understand.</p>
+      </div>
+
     </div>
   </div>
   
-<script src="about-us-modal.js"></script>
+  <script src="about-us-modal.js"></script>
 </body>
 </html>
