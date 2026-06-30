@@ -6,17 +6,16 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at top left, #000000 0%, #C10B01 28%, #F16001 60%, #D9C3AB 100%);
+  color: #ffffff;
 }
 
 .about-us-inline {
   width: 100%;
-  min-height: 100vh;
-  padding: 40px 32px 64px;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: flex-start;
-  background-color: #f8fafc;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 20px 56px;
 }
 
 .modal-overlay {
@@ -27,7 +26,7 @@ body {
   align-items: stretch;
   justify-content: stretch;
   padding: 0;
-  background-color: rgba(15, 23, 42, 0.75);
+  background-color: rgba(0, 0, 0, 0.65);
 }
 
 .modal-overlay[hidden] {
@@ -49,15 +48,15 @@ body {
   max-width: none;
   max-height: none;
   overflow-y: auto;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   border-radius: 0;
   box-shadow: none;
-  padding: 24px;
+  padding: 16px;
 }
 
 @media (min-width: 640px) {
   .modal-box {
-    padding: 32px;
+    padding: 24px;
   }
 }
 
@@ -70,81 +69,98 @@ body {
 
 .modal-header {
   width: 100%;
-  margin-bottom: 32px;
+  margin-bottom: 18px;
+  font-size: 100px;
   text-align: center;
 }
 
 .modal-subtitle {
-  margin: 0 0 10px;
-  font-size: 18px;
+  margin: 4px 0 0;
+  font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.18em;
-  color: rgba(29, 78, 216, 0.85);
-  text-align: center; /* primary/80 */
+  letter-spacing: 0.16em;
+  color: #643a24;
+  text-align: center;
+}
+
+.modal-motto {
+  margin: 12px auto 0;
+  max-width: 700px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #646464;
+  text-align: center;
+  opacity: 0.95;
+}
+
+.page-note {
+  width: 100%;
+  padding: 16px 0 24px;
+  text-align: center;
+}
+
+.mission-placeholder {
+  text-align: center;
+  margin: 0 auto 0;
+  max-width: 760px;
+  color: #475569;
+  font-size: 16px;
+  line-height: 1.6;
+  opacity: 0.85;
 }
 
 .modal-title {
   margin: 0;
-  font-size: 32px;
+  font-size: 80px;
   font-weight: 800;
-  color: #1d4ed8; /* primary */
+  color: #000000;
 }
 
 @media (min-width: 640px) {
   .modal-title {
-    font-size: 42px;
+    font-size: 100px;
   }
 }
 
 .team-grid {
   display: grid;
   width: 100%;
-  grid-template-columns: 1fr;
+  max-width: 1080px;
+  margin: 0 auto 32px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 24px;
-  margin-bottom: 64px;
   align-items: stretch;
-}
-
-@media (min-width: 640px) {
-  .team-grid {
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  }
-}
-
-@media (min-width: 1024px) {
-  .team-grid {
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  }
 }
 
 .team-card {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  border: 1px solid #e2e8f0;
-  background-color: rgba(248, 250, 252, 0.7);
+  justify-content: flex-start;
+  border: 1px solid rgba(167, 167, 167, 0.35);
+  background-color: #FFFFFF;
   border-radius: 12px;
-  padding: 24px;
+  padding: 20px;
   min-height: 320px;
   cursor: pointer;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
   transition: margin-top 0.3s, box-shadow 0.3s;
 }
 
 .team-card:hover {
   margin-top: -4px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
 }
 
 .team-photo {
   position: relative;
-  margin-bottom: 24px;
+  margin-bottom: 18px;
   width: 100%;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 1 / 1;
+  min-height: 260px;
   overflow: hidden;
   border-radius: 12px;
-  box-shadow: 0 0 0 1px #e2e8f0 inset;
+  box-shadow: 0 0 0 1px rgba(167, 167, 167, 0.25) inset;
 }
 
 .team-photo img {
@@ -159,7 +175,7 @@ body {
   margin: 0;
   font-size: 14px;
   font-weight: 600;
-  color: #0f172a;
+  color: #333333;
 }
 
 @media (min-width: 640px) {
@@ -174,7 +190,7 @@ body {
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: rgba(29, 78, 216, 0.8);
+  color: #EB5002;
 }
 
 /* ---------- Footer text ---------- */
