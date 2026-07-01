@@ -272,7 +272,7 @@ body {
     text-align: left;
 }
 
-.card p, b {
+.card p {
     position: relative;
     left: 25px;
     top: -290px;
@@ -300,19 +300,19 @@ body {
 .box {
     position: relative;
     left: 20px;
-    top: -100px;
-    width: 45%;
+    top: -250px;
+    width: 48%;
     padding: 20px;
-    border: 2px solid black;
+    border: 3px solid black;
     border-radius: 10px;
 }
 
 
-.text-box {
+.text-box b {
     position: relative;
     left: 20px;
-    top: -250px;
-    font-size: 25px;
+    top: 1500px;
+    font-size: 30px;
     color: white;
     line-height: 1.6;
     margin: 0;
